@@ -11,9 +11,9 @@ const Homepage = () => {
   const Hometexts = ["Developer", "Designer", "Creativist"]
 
   return (
-    <div className=' bg-white h-screen overflow-x-hidden '>
+    <div className=' bg-black/20 h-screen overflow-x-hidden '>
 
-      <div className=' h-screen bg-[url("https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg")] bg-cover bg-center sm:bg-cover flex flex-col justify-center'>
+      <div className=' h-screen  bg-cover bg-center sm:bg-cover flex flex-col justify-center'>
         <div className='lg:text-[250px] mt-30  text-8xl flex items-center sm:h-fit text-white '>
           <motion.div
             className='flex flex-shrink-0 cursor-grab '
