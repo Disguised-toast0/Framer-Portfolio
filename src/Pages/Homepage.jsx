@@ -52,7 +52,7 @@ const Homepage = () => {
 
       <section
         id="about"
-        className="bg-white/80 py-20 px-6 sm:px-10 lg:px-20 text-center h-[150vh] mb-40 flex items-center justify-center"
+        className="bg-white py-20 px-6 sm:px-10 lg:px-20 text-center h-[150vh]  flex items-center justify-center"
       >
 
         <div className='sm:flex space-y-10 sm:space-y-0 justify-between top-45 sticky'>
@@ -85,12 +85,12 @@ const Homepage = () => {
       </section>
 
 
-      <div className=' h-[250vh]  justify-center items-center z-1'>
+      <div className='bg-white h-[250vh] pt-40  justify-center items-center z-1'>
         <div className=' sm:flex justify-between mx-20 mb-10'>
           <h1 className='text-left sm:text-8xl text-4xl font-black font-display '>Impressive Works</h1>
           <h1 className='sm:w-80 text-left mt-3 sm:mt-0 relative'>HERE’S A SELECTION OF PROJECTS THAT SHOWCASE MY PASSION FOR DESIGN AND DEVELOPMENT, REFLECTING CREATIVITY AND INNOVATION.</h1>
         </div>
-        <div className='sticky top-85 flex items-center mb-50 justify-center'>
+        <div className='sticky top-95 flex items-center mb-50 justify-center'>
           <h1 className='bg-black text-white p-4 rounded-3xl'>Design that Goes with You.</h1>
         </div>
         <Projects />

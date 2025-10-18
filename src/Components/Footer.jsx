@@ -4,7 +4,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
   return (
-    <div className='w-full mt-90  '>
+    <div className='w-full pt-90 bg-white '>
       <div className='sm:mx-20 mx-4 '>
       <div className='sm:mt-0 mt-10'>
         <h1 className='sm:w-240 w-90 text-[33px] sm:text-7xl font-black font-display sm:font-secondary'>Got a project in mind? Let’s talk</h1>
