@@ -6,12 +6,18 @@ import App from './App.jsx'
 import Layout from './Layout.jsx'
 import Homepage from './Pages/Homepage.jsx'
 import About from './Pages/About.jsx'
+import Experience from './Pages/Experience.jsx'
+import Resume from './Pages/Resume.jsx'
+import Github from './Pages/Github.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Homepage/>}/>
       <Route path='about' element={<About/>}/>
+      <Route path='experience' element={<Experience/>}/>
+      <Route path='resume' element={<Resume/>}/>
+      <Route path='github' element={<Github/>}/>
     </Route>
   )
 )

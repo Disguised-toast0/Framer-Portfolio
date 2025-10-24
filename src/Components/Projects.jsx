@@ -4,48 +4,55 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 import { faCircleArrowUp, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import Footer from './Footer';
+import { faCameraRetro } from '@fortawesome/free-solid-svg-icons/faCameraRetro';
 
 const Projects = () => {
     
 
     const images = [
-        {img:"/01.png", text:"Winzee"},
-        {img:"/02.png", text:"Gemini Chat"},
-        {img:"/03.png", text:"Logicify"},
-        {img:"/04.png", text:"Chatgpt"},
+       {img:"/05.png", text:"Orbit Project Collaboration",subtext:"Backend Structured"},
+       {img:"/02.png", text:"Gentest Automation Tool",subtext:"Saas Platform"},
+       {img:"/03.png", text:"MoodScope Analyzer",subtext:"Project Themed"},
+       {img:"/01.png", text:"BookStore",subtext:"Frontend Design"},
+       {img:"/04.png", text:"Discord Automated Bots",subtext:" Server Automation"},
+       {img:"/06.png", text:"Password Generator",subtext:"Hashed Passwords"},
     ]
 
   return (
-    <div className='bg-transparent z-100 relative'>
-      <div className='sm:grid sm:grid-cols-2 sm:grid-rows-2 gap-4 sm:gap-y-16 place-items-center pt-70'>
+    <div className=' p-2 w-full'>
+
+
+      <div className='sm:grid gap-2 gap-y-8 pb-20 sm:pt-20 h-full w-full grid-cols-3'>
         {images.map((img,index)=>{
-            return <div key={index}
-            className='w-70 sm:w-150'
-            >
-              <img src={img.img} className='sm:w-150' /><h1 className='p-4 flex items-center sm:gap-2 sm:text-2xl text-lg font-display'>
-              <Link>
-                <motion.span
-                  whileHover={{ scale: 1.5, rotate: -90,y:-20 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 12 }}
-                  className="inline-block ml-2"
-                >
-                  <FontAwesomeIcon
-                    icon={faCircleArrowUp}
-                    className="rotate-90  sm:text-[40px] text-2xl text-black/40 hover:text-purple-600 duration-300 ease-in-out rounded-4xl"
-                  />
-                </motion.span>
-              </Link>
-              {img.text}</h1></div>
+          const layout = ["col-span-1 row-span-1","col-span-1 row-span-1","col-span-1 row-span-1","col-span-1 row-span-1"]
+            return <motion.div 
+            initial={{opacity:0,translateX:"-50%"}}
+            whileInView={{opacity:1,translateX:"0%"}}
+            whileHover={{y:-10}}
+            transition={{duration:0.6}}
+            key={index} className={` cursor-pointer bord border-solid border-white/30 pt-2 break-inside-avoid flex flex-col ${layout[index]}`}>
+
+              <h1 className='sm:text-[13px] text-[10px] font-medium text-white/80 px-4 font-secondary'>
+                <span><FontAwesomeIcon
+                    icon={faCameraRetro}
+                    className='mr-2'
+                  /></span>
+                SNAPSHOT</h1>
+
+              <h1 className='flex px-4 text-white font-semibold items-center tracking-wider text-xl font-secondary'>
+
+              {img.text}
+              </h1>
+
+              <h1 className='text-lg pb-2 px-4 text-white/40 font-display'>
+                {img.subtext}
+              </h1>
+
+              <img src={img.img} className={`w-full h-90 sm:p-0 p-4 object-cover shadow-md shadow-black/30`}/>
+          </motion.div>
         })}
     </div>
-    <div className='flex justify-center items-center sticky top-95'>
-      <motion.button 
-     whileHover={{ scale: 1.5 }}
-      transition={{ type: "spring", stiffness: 300, damping: 12 }}
-    className='mt-15 border border-[#AEAEAE] py-2 px-4 rounded-3xl font-bold tracking-wide text-center border-solid cursor-pointer hover:bg-purple-500/80 hover:text-white ease-in-out'
-    ><span className='font-black mr-1.5'>•</span>Explore More
-    </motion.button>
-    </div>
+
     </div>
   )
 }

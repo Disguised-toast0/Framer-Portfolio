@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'motion/react';
-import {faComments,faHouse,faFileLines,faCircleArrowUp} from '@fortawesome/free-solid-svg-icons';
+import {faComments,faHouse,faFileLines,faCircleArrowUp, faLayerGroup, faUserAstronaut} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Dynamicbar = () => {
@@ -14,10 +14,11 @@ const Dynamicbar = () => {
 
 
               <motion.span
-              whileHover={{scale:1.5,rotate:45,y:-15}}
+              whileHover={{scale:1.5,y:-15}}
               transition={{type:"spring",stiffness: 300, damping: 12}}
               className='inline-block'
-              ><NavLink to={"about"} className={({ isActive }) =>`flex ${isActive ? "bg-white text-black" : "text-white"}  bg-[#262626] hover:bg-[#D4D4D4] -rotate-45 hover:text-black duration-300 ease-in-out p-3 rounded-[99px]`}><FontAwesomeIcon icon={faCircleArrowUp}/>
+              ><NavLink to={"about"} className={({ isActive }) =>`flex ${isActive ? "bg-white text-black" : "text-white"}  bg-[#262626] hover:bg-[#D4D4D4] hover:text-black duration-300 ease-in-out p-3 rounded-[99px]`}>
+                <FontAwesomeIcon icon={faUserAstronaut}/>
               </NavLink>
               </motion.span>
 
@@ -25,8 +26,8 @@ const Dynamicbar = () => {
               whileHover={{scale:1.5,rotate:-25,y:-15}}
               transition={{type:"spring",stiffness: 300, damping: 12}}
               className='inline-block'
-              ><NavLink  to={"contact"} className={({ isActive }) =>`flex ${isActive ? "bg-white text-black" : "text-white"} bg-[#262626] hover:bg-[#D4D4D4] hover:text-black duration-300 ease-in-out p-3 rounded-4xl`}>
-              <FontAwesomeIcon icon={faComments}/>
+              ><NavLink  to={"experience"} className={({ isActive }) =>`flex ${isActive ? "bg-white text-black" : "text-white"} bg-[#262626] hover:bg-[#D4D4D4] hover:text-black duration-300 ease-in-out p-3 rounded-4xl`}>
+              <FontAwesomeIcon icon={faLayerGroup}/>
               </NavLink>
               </motion.span>
 
