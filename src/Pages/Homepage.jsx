@@ -12,7 +12,7 @@ import { UserData } from '../Contexts/UserContext';
 const Homepage = () => {
 
   const {play,setplaying} = UserData()
-  const bgmusicvid = ["/bgsoundvideo.webm","/bgsoundvid4.mp4"]
+  const bgmusicvid = ["/bgsoundvideo2.webm","/bgsoundvid4.mp4"]
   const [index,setindex] = useState(0)
 
   const videoref = useRef(null)
