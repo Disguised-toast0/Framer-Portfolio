@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Outlet, useLocation, useNavigation } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
 import { UserProvider } from './Contexts/UserContext'
 import Navbar from './Components/Navbar'
 import Dynamicbar from './Components/Dynamicbar'
 import Lenis from 'lenis'
-import Footer from './Components/Footer'
+import ScrolltoTop from './utils/ScrolltoTop'
+import Loader from './Pages/Loader'
 
 const Layout = () => {
 
@@ -22,8 +23,7 @@ const setplaying = () =>{
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2, 
+      // easing: (t) => t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2, 
       smoothWheel: true,
       smoothTouch: false,
       
@@ -39,12 +39,24 @@ const setplaying = () =>{
     return () => lenis.destroy();
   }, []);
 
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 2500); 
+    return () => clearTimeout(timer);
+  }, []); 
+
+  if (showLoader) return <Loader />;
+
    const navigation = useNavigation()
 
-  if(navigation.state === "loading") return <h1>hello ...</h1>
+  if(navigation.state === "loading") return <Loader/>
   return (
     <UserProvider value={{play,setplaying}}>
-      <div id="progress" class="fixed bottom-0 left-0 h-1 rounded-4xl bg-purple-400 z-50 "></div>
+      <ScrolltoTop/>
+      <div id="progress" className="fixed bottom-0 left-0 h-1 rounded-4xl bg-purple-400 z-50 "></div>
       <div className="relative min-h-screen flex flex-col">
       <Navbar/>
       <main className='flex-1'>
@@ -57,4 +69,6 @@ const setplaying = () =>{
 }
 
 export default Layout
+
+
 

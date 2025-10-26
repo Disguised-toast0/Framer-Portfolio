@@ -16,7 +16,7 @@ const Navbar = () => {
     }
   };
 
-  // keep state synced even if user exits fullscreen via ESC
+
   useEffect(() => {
     const onChange = () => setisFullscreen(!!document.fullscreenElement);
     document.addEventListener("fullscreenchange", onChange);
@@ -36,7 +36,7 @@ const Navbar = () => {
         <motion.button 
         whileHover={{y:2}}
         onClick={handleClick} 
-        className='cursor-pointer text-white sticky sm:scale-150 scale-130 p-1  rounded-4xl hover:bg-black/20 ease-in-out'>
+        className='cursor-pointer text-white/40 hover:text-white sticky sm:scale-150 scale-130 p-1  rounded-4xl ease-in-out'>
         <FontAwesomeIcon icon={isFullscreen ? faCompress : faExpand} />
         </motion.button>
         </div>

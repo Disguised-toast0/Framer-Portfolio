@@ -4,22 +4,20 @@ import Footer from '../Components/Footer'
 const Experience = () => {
 
     const jobs = [
-        {img:"/workicon6.png",title:"Venue",subtitle:"Intern",mintitle:"FullStack Dev",date:"MAY 2025 - AUG 2025"},
-        {img:"/workicon1.png",title:"Pregrad",subtitle:"Intern",mintitle:"Backend Dev",date:"APR 2024 - JULY 2024"},
-        {img:"/workicon2.png",title:"Open Source",subtitle:"Contributor",mintitle:"Public",date:"APR 2023 - PRESENT"},
-        {img:"/workicon3.png",title:"Scaler",subtitle:"Moderator",mintitle:"Server",date:"JAN 2023 - AUG 2023"},
-        {img:"/workicon4.png",title:"HackthisFall",subtitle:"Management",mintitle:"Lead",date:"JUNE 2022 - OCT 2022"},
-        {img:"/workicon5.png",title:"Blogger",subtitle:"Medium",mintitle:"Content Posts ",date:"SEPT 2022 - PRESENT"},
+        {img:"/wicon6.webp",title:"Venue",subtitle:"Intern",mintitle:"FullStack Dev",date:"MAY 2025 - AUG 2025"},
+        {img:"/wicon1.webp",title:"Pregrad",subtitle:"Intern",mintitle:"Backend Dev",date:"APR 2024 - JULY 2024"},
+        {img:"/wicon2.webp",title:"Open Source",subtitle:"Contributor",mintitle:"Public",date:"APR 2023 - PRESENT"},
+        {img:"/wicon3.webp",title:"Scaler",subtitle:"Moderator",mintitle:"Server",date:"JAN 2023 - AUG 2023"},
+        {img:"/wicon4.webp",title:"HackthisFall",subtitle:"Management",mintitle:"Lead",date:"JUNE 2022 - OCT 2022"},
+        {img:"/wicon5.webp",title:"Blogger",subtitle:"Medium",mintitle:"Content Posts ",date:"SEPT 2022 - PRESENT"},
     ]
   return (
     <div className='bg-black  overflow-hidden'>
         
       <section className=' text-white min-h-screen relative text-xl sm:text-2xl pt-30'>
         <div className='flex justify-between px-4 sm:px-20 pb-20 w-full sm:text-6xl text-5xl font-black font-secondary'> 
-        <div >
-            <h1 >Work</h1>
-        </div>
-        <h1 className='text-white/40'>{jobs.length}</h1>
+            <h1>Works</h1>
+        <h1 className='text-white/40'>{jobs.length}<span className='text-xl'>exp</span></h1>
         </div>
         
         {jobs.map((job,index)=>(

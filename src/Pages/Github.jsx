@@ -1,15 +1,56 @@
 import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 import Footer from '../Components/Footer'
+import { motion } from 'motion/react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMeteor} from '@fortawesome/free-solid-svg-icons'
 
 const Github = () => {
+    const data = useLoaderData()
   return (
     <div>
-      <div className='h-screen text-6xl text-white flex flex-col items-center justify-center bg-black'>
-     Hello Github
-    </div>
-      <Footer/>
+      <div className='h-screen font-bold bg-black text-white '>
+         <div className='flex justify-between px-4 pt-30 sm:px-20 pb-20 w-full sm:text-6xl text-5xl font-black font-secondary'>
+      <h1>Github</h1>
+      <h1 className='text-white/40'>{data.public_repos}<span className='text-xl'>repo</span></h1>
+        </div>
+        <div className='sm:flex justify-evenly'>
+          <motion.div
+          animate={{y:[0,-20,0]}}
+          transition={{duration:2,ease:"easeInOut",repeat:Infinity,repeatType:"loop"}}
+          >
+            <motion.div
+          initial={{clipPath:"inset(50% 0% 50% 0%)",y:30}}
+          whileHover={{clipPath:"inset(50% 0% 50% 0%)"}}
+          whileInView={{clipPath:"inset(0% 0% 0% 0%)",y:0}}
+          transition={{duration:1.2,ease:"easeInOut"}}
+          className='inline-block'
+            >
+         <img 
+        src={"/favicon.png"}
+        className='sm:mt-10 rounded-2xl sm:w-60 w-20 sm:mx-0 mx-12 mt-8 cursor-pointer'
+        />
+            </motion.div>
+          </motion.div>
+        <div className='sm:ml-20 ml-10 flex flex-col items-start gap-8 font-secondary'>
+        <h1 className='text-4xl  hover:bg-white duration-300 ease-in-out cursor-pointer hover:text-black text-center font-black py-3 rounded-2xl text-white'>{data.name}</h1>
+        <h1 className='text-2xl text-white/70 sm:w-130'>{data.bio}</h1>    
+        <h1 className='sm:text-4xl'>Rate this repo on Github <a href="https://github.com/Disguised-toast0/Framer-Portfolio" target='_blank'>
+        <span className='bg-white text-black font-bold py-2 px-4 rounded-2xl
+         hover:duration-300 ease-in-out hover:bg-yellow-300 cursor-pointer'>
+          Star <FontAwesomeIcon icon={faMeteor} className=''/></span></a></h1>  
+        </div>
+        
+        </div>
+      </div>
+        <Footer/>
     </div>
   )
 }
 
 export default Github
+
+export const GetGithubData = async () =>{
+    const Data = await fetch("https://api.github.com/users/Disguised-toast0")
+    return Data.json()
+}

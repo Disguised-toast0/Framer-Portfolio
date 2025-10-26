@@ -1,7 +1,5 @@
 import React from 'react'
 import { motion } from 'motion/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../Components/Footer';
 
 const About = () => {
@@ -55,17 +53,17 @@ const About = () => {
     desc: "Designing user-centric interfaces that are intuitive, visually appealing, and easy to navigate.",
     span: "col-span-1 row-span-2",
   },
+   {
+    title: "Testing & Debugging",
+    icons: ["icons(26)", "icons(18)", "icons(19)"],
+    desc: "Ensuring code quality and reliability through rigorous testing and debugging processes.",
+    span: "col-span-1 row-span-3",
+  },
   {
     title: "Cloud & Deployment",
     icons: ["icons(16)", "icons(17)", "icons(23)","icons(24)","icons(25)"],
     desc: "Experienced in deploying and managing applications using modern cloud platforms and tools.",
-    span: "col-span-1 row-span-3",
-  },
-  {
-    title: "Core Computer Science Concepts",
-    icons: [],
-    desc: "Demonstrating a strong foundation in core computer science principles, including problem-solving, system design, and efficient computing techniques.",
-    span: "col-span-1 row-span-4 ",
+    span: "col-span-1 row-span-4",
   },
   {
     title: " Personal Development",
@@ -73,11 +71,11 @@ const About = () => {
     desc: "Committed to continuous learning and personal growth to excel in both professional and collaborative environments.",
     span: "col-span-1 row-span-3",
   },
-  {
-    title: "Testing & Debugging",
-    icons: ["icons(26)", "icons(18)", "icons(19)"],
-    desc: "Ensuring code quality and reliability through rigorous testing and debugging processes.",
-    span: "col-span-1 row-span-2",
+    {
+    title: "Core Computer Science Concepts",
+    icons: [],
+    desc: "Demonstrating a strong foundation in core computer science principles, including problem-solving, system design, and efficient computing techniques.",
+    span: "col-span-1 row-span-2 ",
   },
 ];
 
@@ -88,17 +86,16 @@ const About = () => {
         <div >
             <h1 >Skills</h1>
         </div>
-        <h1 className='text-white/40'>{skills.length}</h1>
+        <h1 className='text-white/40'>{skills.length}<span className='text-xl'>areas</span></h1>
         </div>
 
-      <section className='sm:h-[200vh] grid sm:grid-cols-3 bg-black grid-col-1 sm:grid-rows-10'>
+      <section className='sm:h-[200vh] grid  sm:grid-cols-3 bg-black grid-col-1 sm:grid-rows-10'>
         {skills.map((cols,index)=>(
           <motion.div 
-          // initial={{opacity:0,translateX:"80%"}}
-          // whileInView={{opacity:1,translateX:"0%"}}
-          // transition={{duration:0.6}}
+          whileHover={{scale:1.1}}
+          transition={{duration:0.1}}
           key={index}
-          className={`border-white p-6 sm:p-0 border-solid border-1 bg-black h-full w-full flex flex-col hover:bg-blue-500/10 justify-center ${cols.span}`}
+          className={`border-white/40 hover:backdrop-blur-md p-6 sm:p-0 border-solid border-1 bg-black h-full w-full flex flex-col hover:bg-blue-500/10 justify-center ${cols.span}`}
           >
             <div className='flex flex-col justify-start mx-auto gap-y-3'>
             <div className='flex  gap-4 flex-wrap' >

@@ -1,21 +1,18 @@
 import React, { useState } from 'react'
 import { motion } from "motion/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom';
-import { faCircleArrowUp, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import Footer from './Footer';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons/faCameraRetro';
 
 const Projects = () => {
     
 
     const images = [
-       {img:"/05.png", text:"Orbit Project Collaboration",subtext:"Backend Structured"},
-       {img:"/02.png", text:"Gentest Automation Tool",subtext:"Saas Platform"},
-       {img:"/03.png", text:"MoodScope Analyzer",subtext:"Project Themed"},
-       {img:"/01.png", text:"BookStore",subtext:"Frontend Design"},
-       {img:"/04.png", text:"Discord Automated Bots",subtext:" Server Automation"},
-       {img:"/06.png", text:"Password Generator",subtext:"Hashed Passwords"},
+       {img:"/05.png", text:"Orbit Project Collaboration",subtext:"Backend Structured",href:"https://github.com/Disguised-toast0/Orbit---Project-Management-Tool"},
+       {img:"/02.png", text:"Gentest Automation Tool",subtext:"Saas Platform",href:"https://gentest-frontend.onrender.com/"},
+       {img:"/03.png", text:"MoodScope Analyzer",subtext:"Project Themed",href:"https://mood-space-rosy.vercel.app/"},
+       {img:"/01.png", text:"BookStore",subtext:"Frontend Design",href:"https://bookverse-premium-bookstore.netlify.app/"},
+       {img:"/04.png", text:"Discord Automated Bots",subtext:" Server Automation",href:"https://github.com/Disguised-toast0/AI_Discord_bot"},
+       {img:"/06.png", text:"Password Generator",subtext:"Hashed Passwords",href:"https://github.com/Disguised-toast0/Password-Generator"},
     ]
 
   return (
@@ -48,7 +45,7 @@ const Projects = () => {
                 {img.subtext}
               </h1>
 
-              <img src={img.img} className={`w-full h-90 sm:p-0 p-4 object-cover shadow-md shadow-black/30`}/>
+             <a href={img.href} target='_blank'><img src={img.img} className={`w-full h-90 sm:p-0 p-4 object-cover shadow-md shadow-black/30`}/></a>
           </motion.div>
         })}
     </div>

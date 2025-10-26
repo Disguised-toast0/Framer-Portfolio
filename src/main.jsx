@@ -9,6 +9,7 @@ import About from './Pages/About.jsx'
 import Experience from './Pages/Experience.jsx'
 import Resume from './Pages/Resume.jsx'
 import Github from './Pages/Github.jsx'
+import { GetGithubData } from './Pages/Github.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,8 +17,8 @@ const router = createBrowserRouter(
       <Route path='' element={<Homepage/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='experience' element={<Experience/>}/>
-      <Route path='resume' element={<Resume/>}/>
-      <Route path='github' element={<Github/>}/>
+      <Route path='projects' element={<Resume/>}/>
+      <Route path='github' loader={GetGithubData} element={<Github/>}/>
     </Route>
   )
 )
