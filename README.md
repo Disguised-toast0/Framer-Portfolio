@@ -1,7 +1,7 @@
 # 🧠 Piyush Koundal — Developer Portfolio
 
 A fully custom, high-performance **developer portfolio** designed and built from scratch.  
-Showcasing my work, creativity, and technical skills with modern web technologies — blending animation, performance, and minimalist design.
+Showcasing my work, creativity, and technical skills with modern web technologies — blending animation, performance, and minimalist design and yes I built it just from scratch.
 
 ---
 
