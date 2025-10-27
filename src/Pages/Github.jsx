@@ -9,7 +9,7 @@ const Github = () => {
     const data = useLoaderData()
   return (
     <div>
-      <div className='h-screen font-bold bg-black text-white '>
+      <section className='h-screen font-bold bg-black text-white '>
          <div className='flex justify-between px-4 pt-30 sm:px-20 pb-20 w-full sm:text-6xl text-5xl font-black font-secondary'>
       <h1>Github</h1>
       <h1 className='text-white/40'>{data.public_repos}<span className='text-xl'>repo</span></h1>
@@ -28,6 +28,7 @@ const Github = () => {
             >
          <img 
         src={"/favicon.png"}
+        alt='Logo image'
         className='sm:mt-10 rounded-2xl sm:w-60 w-20 sm:mx-0 mx-12 mt-8 cursor-pointer'
         />
             </motion.div>
@@ -42,7 +43,7 @@ const Github = () => {
         </div>
         
         </div>
-      </div>
+      </section>
         <Footer/>
     </div>
   )

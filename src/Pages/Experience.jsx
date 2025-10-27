@@ -23,7 +23,7 @@ const Experience = () => {
         {jobs.map((job,index)=>(
             <div key={index} className='flex items-center justify-between py-8 border-b-1 border-solid border-white/30 sm:px-20 px-4'>
             <div className='flex gap-4 items-center w-80'>
-                <img src={job.img} className='w-16 h-16 rounded-2xl shadow-xl shadow-black/60'/>
+                <img src={job.img} alt={job.title} className='w-16 h-16 rounded-2xl shadow-xl shadow-black/60'/>
                 <div className='font-secondary sm:text-xl'>
                     <h1>{job.title}</h1>
                     <h1 className='text-lg'>{job.subtitle} <br></br> <span className=' text-white/40  text-sm'>{job.mintitle}</span></h1>

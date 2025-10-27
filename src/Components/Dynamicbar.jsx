@@ -7,7 +7,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Dynamicbar = () => {
   const [isVisible, setIsVisible] = useState(null)
-  const icons = [{name:faUserAstronaut,to:"about",text:"About"},
+  const icons = 
+    [{name:faUserAstronaut,to:"about",text:"About"},
     {name:faLayerGroup,to:"experience",text:"Work"},
     {name:faHouse,to:"/",text:"Home"},
     {name:faCode,to:"projects",text:"Projects"},
@@ -31,7 +32,11 @@ const Dynamicbar = () => {
               className='inline-block'
               onMouseEnter={()=>setIsVisible(index)}
               onMouseLeave={()=>setIsVisible(null)}
-              ><NavLink to={icon.to} className={({ isActive }) =>`flex ${isActive ? "bg-white text-black" : "text-white"}  bg-[#262626] hover:bg-[#D4D4D4] hover:text-black  duration-300 ease-in-out p-3 rounded-[99px]`}>
+              ><NavLink 
+              to={icon.to} 
+              className={({ isActive }) =>`flex ${isActive ? "bg-white text-black" : "text-white"}  bg-[#262626] hover:bg-[#D4D4D4] hover:text-black  duration-300 ease-in-out p-3 rounded-[99px]`}
+              aria-label={icon.text}
+              >
                 <FontAwesomeIcon icon={icon.name}/>
                 {isVisible === index && (
                   <h1 className='absolute sm:rotate-20 sm:inline-block hidden sm:bottom-12 left-3 font-secondary text-white bg-white/40 px-2 py-1 rounded-4xl text-[8px]'>{icon.text}</h1>
@@ -40,10 +45,6 @@ const Dynamicbar = () => {
               </motion.span>
             ))}
               
-        
-
-              
-
              </div>
             </motion.div>
     </div>

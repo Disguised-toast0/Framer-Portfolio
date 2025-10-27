@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from "motion/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
-import { faForwardStep, faMapPin, faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faForwardStep, faMapPin, faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 import Projects from '../Components/Projects';
 import Footer from '../Components/Footer';
 import HoveringTexts from '../utils/HoveringTexts';
@@ -24,7 +24,7 @@ const Homepage = () => {
   //     audio.current.play()
   //   }else{
   //     audio.current.pause()
-  //   }
+  //   }xx
     setplaying((prev)=>!prev)
   }
 
@@ -48,8 +48,8 @@ const Homepage = () => {
     >
       <motion.video
         ref={videoref}
-        initial={{ scale: 0.4, borderRadius: "1000px" }}
-        animate={{ scale: 1, borderRadius: 0 }}
+        initial={{ scale: 0.4, clipPath:"circle(0%)"}}
+        animate={{ scale: 1, clipPath:"circle(100%)" }}
         transition={{ duration: 1 }}
         className="absolute top-1/2 left-1/2 min-w-[100vh] min-h-[100vh]
         -translate-x-1/2 -translate-y-1/2 sm:object-cover sm:rotate-0 rotate-90 scale-[1.1]"
@@ -65,6 +65,7 @@ const Homepage = () => {
         <div className="flex items-center">
           <div className="text-sm mx-2">
             <motion.button
+              aria-label='pause'
               whileHover={{scale:1.5,y:10}}
               transition={{type:"spring",stiffness: 300, damping: 12}}
               className="rounded-3xl p-2 hover:bg-white hover:text-black ease-in-out cursor-pointer"
@@ -76,6 +77,7 @@ const Homepage = () => {
 
           <div className="text-sm">
             <motion.button
+              aria-label='play next'
               whileHover={{scale:1.5,y:10}}
               transition={{type:"spring",stiffness: 300, damping: 12}}
               className="rounded-3xl p-2 hover:bg-white hover:text-black ease-in-out cursor-pointer"
@@ -102,6 +104,7 @@ const Homepage = () => {
     >
       <div className="text-sm mx-2 pt-20 flex items-center gap-2">
         <motion.button
+        aria-label='Play immersive music'
         whileHover={{scale:1.5,y:10,marginRight:"10px"}}
          transition={{type:"spring",stiffness: 300, damping: 12}}
           className="ml-1 bg-white/40 rounded-4xl h-8 w-8 hover:bg-white hover:text-black ease-in-out cursor-pointer"
@@ -112,7 +115,7 @@ const Homepage = () => {
         <h1 className="font-secondary">Immersive music</h1>
       </div>
 
-      <div className="flex flex-col items-center mx-10 justify-center h-[70vh] font-black text-center">
+      <div className="flex flex-col items-center mx-10 justify-center sm:h-[70vh] h-[65vh] font-black text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,7 +128,13 @@ const Homepage = () => {
           </span>
         </motion.h1>
       </div>
-      <span className=' block mx-4 mt-16 text-sm text-end text-white/40'>Scroll down</span>
+      <div className='block mx-4 sm:mt-16  text-sm text-end'>
+      <h1 className=' text-white'>Scroll down</h1>
+      <motion.p 
+      animate={{y:[0,10,0]}}
+      transition={{duration:2,repeat:Infinity,repeatType:"loop",ease:"easeInOut"}}
+      className='mr-8'><FontAwesomeIcon icon={faAngleDown}/></motion.p>
+      </div>
     </motion.div>
   )}
 </AnimatePresence>
@@ -163,16 +172,17 @@ const Homepage = () => {
               <div className='flex items-center justify-end'>
               <h1 className='sm:text-2xl mt-6'>More About me </h1>
               <Link to={"/github"}>
-                  <motion.h1
+                  <motion.button
+                    aria-label='More about me'
                     whileHover={{ y:10,scale:1.2 }}
                     transition={{ type: "spring", stiffness: 300, damping: 12 }}
-                    className="inline-block ml-4"
+                    className="inline-block ml-6 cursor-pointer"
                   >
                     <FontAwesomeIcon  
                       icon={faMapPin}
                       className=" text-2xl p-2 mt-8 flex text-white bg-white/40 hover:text-black hover:bg-white duration-300 ease-in-out rounded-[99px]"
                     />
-                  </motion.h1>
+                  </motion.button>
                 </Link>
               </div>
 

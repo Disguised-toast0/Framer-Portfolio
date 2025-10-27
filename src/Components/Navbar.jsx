@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (  
-    <div className='fixed top-0 left-0 bg-black/10 backdrop-blur-xl z-1 w-full  font-display text-center '>
+    <nav className='fixed top-0 left-0 bg-black/10 backdrop-blur-xl z-1 w-full  font-display text-center '>
       <div className='flex justify-between py-3 items-center sm:mx-12 mx-4 text-white sm:text-sm '>
         <h1 className='font-secondary tracking-wide cursor-pointer sm:text-md'>
            PiyushK
@@ -36,12 +36,13 @@ const Navbar = () => {
         <motion.button 
         whileHover={{y:2}}
         onClick={handleClick} 
+        aria-label={isFullscreen? "Go Fullscreen" : "Exit Fullscreen"}
         className='cursor-pointer text-white/40 hover:text-white sticky sm:scale-150 scale-130 p-1  rounded-4xl ease-in-out'>
         <FontAwesomeIcon icon={isFullscreen ? faCompress : faExpand} />
         </motion.button>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
 
