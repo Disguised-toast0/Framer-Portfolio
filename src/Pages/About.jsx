@@ -148,6 +148,7 @@ const About = () => {
               {cols.icons.map((icon,i)=>(
                 <motion.div 
                 whileHover={{y:-10}}
+                key={i}
                 ><img key={i} src={`/icons/${icon.src}.webp`} alt={icon.alt} className='sm:bg-white/10 sm:p-3 rounded-md sm:w-15 sm:h-15 h-6 w-6'/></motion.div>
               ))}
             </div>

@@ -8,7 +8,7 @@ import { faMeteor} from '@fortawesome/free-solid-svg-icons'
 const Github = () => {
     const data = useLoaderData()
   return (
-    <div>
+    <div className='overflow-hidden'>
       <section className='h-screen font-bold bg-black text-white '>
          <div className='flex justify-between px-4 pt-30 sm:px-20 pb-20 w-full sm:text-6xl text-5xl font-black font-secondary'>
       <h1>Github</h1>
@@ -29,14 +29,14 @@ const Github = () => {
          <img 
         src={"/favicon.png"}
         alt='Logo image'
-        className='sm:mt-10 rounded-2xl sm:w-60 w-20 sm:mx-0 mx-12 mt-8 cursor-pointer'
+        className='mt-10 rounded-2xl sm:w-60 w-20 sm:mx-0 mx-6 cursor-pointer'
         />
             </motion.div>
           </motion.div>
-        <div className='sm:ml-20 ml-10 flex flex-col items-start gap-8 font-secondary'>
-        <h1 className='text-4xl  hover:bg-white duration-300 ease-in-out cursor-pointer hover:text-black text-center font-black py-3 rounded-2xl text-white'>{data.name}</h1>
-        <h1 className='text-2xl text-white/70 sm:w-130'>{data.bio}</h1>    
-        <h1 className='sm:text-4xl'>Rate this repo on Github <a href="https://github.com/Disguised-toast0/Framer-Portfolio" target='_blank'>
+        <div className='sm:mx-20 mx-6 flex flex-col items-start gap-8 font-secondary'>
+        <h1 className='text-4xl  hover:bg-white duration-300 ease-in-out cursor-pointer hover:text-black text-center font-black sm:py-2 rounded-2xl text-white'>{data.name}</h1>
+        <h1 className='sm:text-2xl text-white/70 sm:w-130 w-90'>{data.bio}</h1>    
+        <h1 className='sm:text-4xl flex flex-wrap gap-3'>Rate this repo on Github <a href="https://github.com/Disguised-toast0/Framer-Portfolio" target='_blank'>
         <span className='bg-white text-black font-bold py-2 px-4 rounded-2xl
          hover:duration-300 ease-in-out hover:bg-yellow-300 cursor-pointer'>
           Star <FontAwesomeIcon icon={faMeteor} className=''/></span></a></h1>  

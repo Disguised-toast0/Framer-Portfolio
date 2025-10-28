@@ -16,6 +16,7 @@ const Layout = () => {
   document.getElementById("progress").style.width = progress + "%";
 });
 
+const navigation = useNavigation()
 const [play,setplay] = useState(false)
 const setplaying = () =>{
     setplay((prev)=> !prev)
@@ -48,9 +49,7 @@ const setplaying = () =>{
     return () => clearTimeout(timer);
   }, []); 
 
-  if (showLoader) return <Loader />;
-
-   const navigation = useNavigation()
+  if (showLoader) return <Loader />
 
   if(navigation.state === "loading") return <Loader/>
   return (
