@@ -16,6 +16,17 @@ const Navbar = () => {
     }
   };
 
+  useEffect(()=>{
+    const handlefullscreen = (e) =>{
+      if(e.key.toLowerCase()=== "f"){
+        handleClick()
+      }
+    }
+
+    window.addEventListener("keydown",handlefullscreen)
+    return () => window.removeEventListener("keydown",handlefullscreen)
+  },[])
+
 
   useEffect(() => {
     const onChange = () => setisFullscreen(!!document.fullscreenElement);

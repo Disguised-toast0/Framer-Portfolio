@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from "motion/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
@@ -14,6 +14,7 @@ const Homepage = () => {
   const {play,setplaying} = UserData()
   const bgmusicvid = ["/bgsoundvideo2.webm","/bgsoundvid4.mp4"]
   const [index,setindex] = useState(0)
+
 
   const videoref = useRef(null)
   // const audio = useRef(new Audio("/bgsound.mp3"))
@@ -66,7 +67,7 @@ const Homepage = () => {
           <div className="text-sm mx-2">
             <motion.button
               aria-label='pause'
-              whileHover={{scale:1.5,y:10}}
+              whileHover={{scale:1.5,y:10,marginRight:"8px"}}
               transition={{type:"spring",stiffness: 300, damping: 12}}
               className="rounded-3xl p-2 hover:bg-white hover:text-black ease-in-out cursor-pointer"
               onClick={handleMusic}
@@ -78,7 +79,7 @@ const Homepage = () => {
           <div className="text-sm">
             <motion.button
               aria-label='play next'
-              whileHover={{scale:1.5,y:10}}
+              whileHover={{scale:1.5,y:10,marginRight:"8px"}}
               transition={{type:"spring",stiffness: 300, damping: 12}}
               className="rounded-3xl p-2 hover:bg-white hover:text-black ease-in-out cursor-pointer"
               onClick={playnextvid}
