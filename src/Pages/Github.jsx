@@ -39,7 +39,7 @@ const Github = () => {
         <h1 className='sm:text-4xl flex flex-wrap gap-3'>Rate this repo on Github <a href="https://github.com/Disguised-toast0/Framer-Portfolio" target='_blank'>
         <span className='bg-white text-black font-bold py-2 px-4 rounded-2xl
          hover:duration-300 ease-in-out hover:bg-yellow-300 cursor-pointer'>
-          Star <FontAwesomeIcon icon={faMeteor} className=''/></span></a></h1>  
+          Star <FontAwesomeIcon icon={faMeteor}/></span></a></h1>  
         </div>
         
         </div>
