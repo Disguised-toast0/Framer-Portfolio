@@ -151,8 +151,8 @@ const About = () => {
                 ><img key={i} src={`/icons/${icon.src}.webp`} alt={icon.alt} className='sm:bg-white/10 sm:p-3 rounded-md sm:w-15 sm:h-15 h-6 w-6'/></motion.div>
               ))}
             </div>
-            <h1 className='text-lg text-white'>{cols.title}</h1>
-            <h1 className='text-sm text-white/60  w-90'>{cols.desc}</h1>
+            <h1 className='text-lg text-white font-display'>{cols.title}</h1>
+            <h1 className='text-sm text-white/60 font-primary w-90'>{cols.desc}</h1>
             </div>
           </motion.div>
         ))}

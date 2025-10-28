@@ -34,7 +34,7 @@ const Homepage = () => {
   }
 
   return (
-    <div className=' overflow-x-hidden  bg-black'>
+    <div className=' overflow-x-hidden  bg-black' >
 
       <AnimatePresence mode="wait">
   {play ? (
@@ -131,8 +131,8 @@ const Homepage = () => {
       <div className='block mx-4 sm:mt-16  text-sm text-end'>
       <h1 className=' text-white'>Scroll down</h1>
       <motion.p 
-      animate={{y:[0,10,0]}}
-      transition={{duration:2,repeat:Infinity,repeatType:"loop",ease:"easeInOut"}}
+      animate={{y:[0,7,0]}}
+      transition={{duration:1.5,repeat:Infinity,repeatType:"loop",ease:"easeInOut"}}
       className='mr-8'><FontAwesomeIcon icon={faAngleDown}/></motion.p>
       </div>
     </motion.div>
@@ -154,7 +154,7 @@ const Homepage = () => {
               viewport={{ once: true }}
               className='sm:w-190 sm:text-[39px] sm:leading-12 capitalize text-left font-primary tracking-wide'>Driven by curiosity and a love for design, I create simple,
               functional, and visually striking digital experiences.
-              As a student, I’m always learning and exploring new ideas.
+              As a developer, I’m always learning and exploring new ideas.
             </motion.h1>
 
             <div className='sm:w-120 flex flex-col lg:text-right sm:text-left text-right sm:mt-30 justify-center'>

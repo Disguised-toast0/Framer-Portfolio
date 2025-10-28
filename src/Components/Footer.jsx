@@ -52,9 +52,9 @@ const Footer = () => {
          hover:bg-white duration-500 ease-in-out sm:mr-30 mr-10'><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></NavLink>
         </div>
 
-        <div className='sm:flex justify-between ml-4 gap-20 items-center '>
+        <div className='sm:flex justify-between mx-4 gap-20 items-center '>
         <h1 className='lg:text-[190px]  text-6xl font-primary font-bold text-white/60 '>@itspiyushk</h1>
-        <h1 className='sm:text-5xl text-2xl pt-5 font-display'>Your friendly chaos creator </h1>
+        <h1 className='sm:text-[40px] text-2xl pt-5 font-primary'>Your friendly chaos creator </h1>
         </div>
         <div className='sm:p-10 px-5 pt-2 flex justify-between font-secondary text-white/80 capitalize text-sm'>
         <h1>don't steal my work!</h1>
