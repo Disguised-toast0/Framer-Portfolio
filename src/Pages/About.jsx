@@ -10,10 +10,10 @@ const About = () => {
     icons: [
       { src: "icons(1)", alt: "HTML5 icon" },
       { src: "icons(2)", alt: "Javascript icon" },
+      { src: "icons(6)", alt: "React icon" },
       { src: "icons(3)", alt: "Typescript icon" },
       { src: "icons(4)", alt: "NextJs icon" },
-      { src: "icons(5)", alt: "Redux icon" },
-      { src: "icons(6)", alt: "React icon" },
+      // { src: "icons(5)", alt: "Redux icon" },
     ],
     desc: "Building engaging and user-friendly web interfaces using modern frameworks and technologies with expertise.",
     span: "col-span-1 row-span-3",
@@ -32,7 +32,7 @@ const About = () => {
     title: "Programming Languages",
     icons: [
       { src: "icons(27)", alt: "Python icon" },
-      { src: "icons(28)", alt: "C icon" },
+      // { src: "icons(28)", alt: "C icon" },
       { src: "icons(36)", alt: "C++ icon" },
     ],
     desc: "Proficient in problem-solving and applying programming languages to implement efficient data structures and algorithms.",
@@ -103,7 +103,7 @@ const About = () => {
     title: "Cloud & Deployment",
     icons: [
       { src: "icons(16)", alt: "Docker icon" },
-      { src: "icons(17)", alt: "Azure icon" },
+      // { src: "icons(17)", alt: "Azure icon" },
       { src: "icons(23)", alt: "Aws icon" },
       { src: "icons(24)", alt: "One icon" },
       { src: "icons(25)", alt: "Vercel icon" },

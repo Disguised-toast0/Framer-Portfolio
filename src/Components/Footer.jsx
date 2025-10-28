@@ -45,7 +45,7 @@ const Footer = () => {
           <li className='hover:text-yellow-300'><a href='https://www.linkedin.com/in/piyush-koundal-649471203/' target='_blank' aria-label='Linkedin'>Linkedin</a></li>
         <li className='hover:text-yellow-300'><a href='https://github.com/Disguised-toast0' target='_blank' aria-label='Github'> Github</a></li>
         </ul>
-        <NavLink to={"/about"}>
+        <NavLink to={"/skills"}>
         <button 
         aria-label='About'
         className='sm:text-6xl text-4xl bg-white/40 rounded-[99px] sm:w-30 sm:h-30 w-20 h-20 text-white hover:text-black cursor-pointer

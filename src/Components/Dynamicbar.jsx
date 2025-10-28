@@ -8,8 +8,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const Dynamicbar = () => {
   const [isVisible, setIsVisible] = useState(null)
   const icons = 
-    [{name:faUserAstronaut,to:"about",text:"About"},
-    {name:faLayerGroup,to:"experience",text:"Work"},
+    [{name:faUserAstronaut,to:"skills",text:"Skills"},
+    {name:faLayerGroup,to:"works",text:"Work"},
     {name:faHouse,to:"/",text:"Home"},
     {name:faCode,to:"projects",text:"Projects"},
     {name:faGithub,to:"github",text:"Github"}]
