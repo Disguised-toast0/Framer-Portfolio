@@ -45,7 +45,7 @@ const About = () => {
       { src: "icons(12)", alt: "Tailwindcss icon" },
       { src: "icons(13)", alt: "Bootstrap icon" },
       { src: "icons(14)", alt: "Sass icon" },
-      { src: "icons(15)", alt: "NextUI icon" },
+      // { src: "icons(15)", alt: "NextUI icon" },
     ],
     desc: "Crafting visually appealing and responsive designs with advanced styling tools and frameworks.",
     span: "col-span-1 row-span-3",
@@ -67,7 +67,7 @@ const About = () => {
       { src: "icons(7)", alt: "Node.js icon" },
       { src: "icons(8)", alt: "Express.js icon" },
       { src: "icons(9)", alt: "FastAPI icon" },
-      { src: "icons(10)", alt: "REST API icon" },
+      // { src: "icons(10)", alt: "REST API icon" },
     ],
     desc: "Developing robust server-side logic and APIs to power dynamic and scalable web applications.",
     span: "col-span-1 row-span-2",
@@ -94,7 +94,7 @@ const About = () => {
     icons: [
       { src: "icons(26)", alt: "Postman icon" },
       { src: "icons(18)", alt: "React Testing Library icon" },
-      { src: "icons(19)", alt: "Selenium icon" },
+      // { src: "icons(19)", alt: "Selenium icon" },
     ],
     desc: "Ensuring code quality and reliability through rigorous testing and debugging processes.",
     span: "col-span-1 row-span-3",
@@ -102,7 +102,7 @@ const About = () => {
   {
     title: "Cloud & Deployment",
     icons: [
-      { src: "icons(16)", alt: "Docker icon" },
+      // { src: "icons(16)", alt: "Docker icon" },
       // { src: "icons(17)", alt: "Azure icon" },
       { src: "icons(23)", alt: "Aws icon" },
       { src: "icons(24)", alt: "One icon" },
@@ -135,13 +135,13 @@ const About = () => {
         <h1 className='text-white/40'>{skills.length}<span className='text-xl'>areas</span></h1>
         </section>
 
-      <section className='sm:h-[200vh] grid  sm:grid-cols-3 bg-black grid-col-1 sm:grid-rows-10'>
+      <section className='sm:h-[170vh] grid  sm:grid-cols-3 bg-black grid-col-1 sm:grid-rows-10'>
         {skills.map((cols,index)=>(
           <motion.div 
-          whileHover={{scale:1.1}}
+          whileHover={{scale:1.04}}
           transition={{duration:0.1}}
           key={index}
-          className={`border-white/40 hover:backdrop-blur-md p-6 sm:p-0 border-solid border-1 bg-black h-full w-full flex flex-col hover:bg-blue-500/10 justify-center ${cols.span}`}
+          className={`border-white/30 hover:backdrop-blur-md p-6 sm:p-0 border-solid border-1 bg-black h-full w-full flex flex-col hover:shadow-xl hover:shadow-white/40 justify-center ${cols.span}`}
           >
             <div className='flex flex-col justify-start mx-auto gap-y-3'>
             <div className='flex  gap-4 flex-wrap' >
@@ -149,7 +149,8 @@ const About = () => {
                 <motion.div 
                 whileHover={{y:-10}}
                 key={i}
-                ><img key={i} src={`/icons/${icon.src}.webp`} alt={icon.alt} className='sm:bg-white/10 sm:p-3 rounded-md sm:w-15 sm:h-15 h-6 w-6'/></motion.div>
+                ><img key={i} src={`/icons/${icon.src}.webp`} alt={icon.alt} className='sm:bg-white/10 sm:p-3 rounded-md sm:w-15 sm:h-15 h-6 w-6'/>
+                </motion.div>
               ))}
             </div>
             <h1 className='text-lg text-white font-display'>{cols.title}</h1>
