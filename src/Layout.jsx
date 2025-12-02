@@ -22,17 +22,17 @@ const setplaying = () =>{
 
  const buzzWords = [
     "POrtal OpeNS!",
-    "Wassup?",
+    "Pizza?",
     "INtruDer?",
-    "Space Mariness",
+    "Space Mariness!",
     "Be Cautious!",
     "CurIous?",
-    "Self Destructing in T-10s",
+    "Self Destructing in T-10s!",
     "Malfuntion!",
-    "Master Chief?",
-    "Error 404",
-    "Welcome Home",
-    "Flashing!"
+    "Smileee!",
+    "Error 404!",
+    "Spooky!",
+    "Coffee Break?"
   ];
 
 // for text in transition
@@ -65,7 +65,7 @@ useEffect(() => {
   setIsTransitioning(true);
   const timeout = setTimeout(() => {
     setIsTransitioning(false);
-  }, 1400);
+  }, 960);
 
   return () => clearTimeout(timeout);
 }, [location.pathname]);
@@ -116,9 +116,9 @@ useEffect(() => {
           animate={{ scaleY: 0 }}
           exit={{ scaleY: 1 }}
           transition={{
-            duration: 0.8,
+            duration: 0.4,
             ease: [0.22, 1, 0.36, 1],
-            delay: index * 0.13 // delay
+            delay: index * 0.08 // delay
           }}
           className='origin-top w-1/5 h-screen bg-orange-500'
         >
@@ -127,7 +127,7 @@ useEffect(() => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0.7 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.7 }}
               className='text-white font-fancy sm:text-4xl text-xl font-bold  tracking-wider h-full flex items-center justify-center'
             >
               {transitionText}
@@ -145,9 +145,9 @@ useEffect(() => {
           animate={{ scaleY: 0 }}
           exit={{ scaleY: 0 }}
           transition={{
-            duration: 0.8,
+            duration: 0.4,
             ease: [0.22, 1, 0.36, 1],
-            delay: index * 0.13
+            delay: index * 0.08
           }}
           className='origin-bottom w-1/5 h-screen bg-orange-500'
         >

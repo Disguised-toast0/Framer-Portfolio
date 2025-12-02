@@ -116,7 +116,7 @@ const Homepage = () => {
         <h1 className="font-secondary">Immersive music</h1>
       </div>
 
-      <div className="flex flex-col items-center mx-10 justify-center sm:h-[70vh] h-[65vh] font-black text-center">
+      <div className="flex flex-col items-center uppercase tracking-wide sm:text-[130px] mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -153,8 +153,8 @@ const Homepage = () => {
               whileInView={{ opacity: 1, translateY: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className='sm:w-190 sm:text-[39px] sm:leading-12 capitalize text-left font-primary tracking-wide'>Driven by curiosity and a love for design, I create simple,
-              functional, and visually striking digital experiences.
+              className='sm:w-190 sm:text-[39px] sm:leading-12 capitalize text-left font-secondary  tracking-wide'>Driven by curiosity and a love for design, I create
+              functional and visually striking websites.
               As a developer, I’m always learning and exploring new ideas.
             </motion.h1>
 
@@ -167,7 +167,7 @@ const Homepage = () => {
                 viewport={{ once: true }}
                 className='sm:text-xl font-secondary'>
                 The fusion of my passion for design, development,
-                and seamless user experiences places me at the intersection of creativity and technology in the digital world.
+                and seamless user experiences places me at the intersection of creativity.
               </motion.h1>
 
               <div className='flex items-center justify-end'>
