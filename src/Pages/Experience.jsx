@@ -1,7 +1,32 @@
 import React from "react";
 import Footer from "../Components/Footer";
+import { useState } from "react";
+import { motion } from "motion/react";
+import HoveringTexts from "../utils/HoveringTexts";
 
 const Experience = () => {
+  const [HoveredIndex, setHoveredIndex] = useState(0);
+
+  const hoveredJobText = [
+    // Tech role
+    ["JAVASCRIPT" , "NODE"],
+
+    // Intern / Tech role
+    ["REACT" , "DATABASES"],
+
+    // Open source / Community
+    ["OPEN SOURCE" , "COLLABORATION"],
+
+    // Moderator / Ops
+    ["COMMUNITY" , "OPERATIONS"],
+
+    // Lead / Management
+    ["TEAM" , "LEADERSHIP"],
+
+    // Content / Blogging
+    ["CONTENT" , "CREATION"],
+  ];
+
   const jobs = [
     {
       img: "/wicon6.webp",
@@ -60,27 +85,42 @@ const Experience = () => {
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="flex items-center justify-between py-8 border-b-1 border-solid border-white/30 sm:px-20 px-4"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            className="relative"
           >
-            <div className="flex gap-4 items-center w-80">
-              <img
-                src={job.img}
-                alt={job.title}
-                className="w-16 h-16 rounded-2xl shadow-xl shadow-black/60"
-              />
-              <div className="font-secondary sm:text-xl">
-                <h1>{job.title}</h1>
-                <h1 className="text-lg">
-                  {job.subtitle} <br></br>{" "}
-                  <span className=" text-white/40  text-sm">
-                    {job.mintitle}
-                  </span>
-                </h1>
+            <div className="flex items-center justify-between h-35 py-8 border-b border-white/30 sm:px-20 px-4">
+              <div className="flex gap-4 items-center w-80">
+                <img
+                  src={job.img}
+                  alt={job.title}
+                  className="w-16 h-16 rounded-2xl shadow-xl shadow-black/60"
+                />
+                <div className="font-secondary sm:text-xl">
+                  <h1>{job.title}</h1>
+                  <h1 className="text-lg text-white/60">{job.mintitle}</h1>
+                </div>
               </div>
+
+              <h1 className="sm:mr-10 text-[10px] tracking-widest px-2 border rounded-2xl">
+                {job.date}
+              </h1>
             </div>
-            <h1 className="sm:mr-10 text-center sm:text-[10px] text-[8px] font-secondary py-1 tracking-widest px-2 border rounded-2xl">
-              {job.date}
-            </h1>
+
+            {HoveredIndex === index && (
+              <motion.div
+                layoutId="hover-layer"
+                className="absolute inset-0 bg-[#D3FD50] flex items-center justify-between py-8 sm:px-20 px-4"
+                transition={{
+                  type: "tween",
+                  duration: 0.2,
+                  ease: "easeOut",
+                }}
+              >
+                <HoveringTexts Hometexts={hoveredJobText[index]} textdetails={{ size: "8xl", color:"black"}} />
+                <HoveringTexts Hometexts={hoveredJobText[index]} textdetails={{ size: "8xl", color:"black"}} />
+              </motion.div>
+            )}
           </div>
         ))}
       </section>
