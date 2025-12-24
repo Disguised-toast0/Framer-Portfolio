@@ -207,9 +207,7 @@ const Homepage = () => {
       <div className=" text-white  pt-14 border-solid min-h-screen border-white/20 bg-black">
         <div className="relative bg-black flex flex-col border-y-1 border-white/30 border-solid justify-center  sm:p-4 p-2">
           <div className="lg:text-[30px] text-3xl flex items-center sm:h-fit  text-white ">
-            <HoveringTexts />
-            <HoveringTexts />
-            <HoveringTexts />
+            <HoveringTexts  />
           </div>
         </div>
 
@@ -232,8 +230,6 @@ const Homepage = () => {
 
         <div className="relative bg-black flex flex-col border-y-1 border-white/30 border-solid justify-center  sm:p-4 p-2">
           <div className="lg:text-[30px] text-3xl flex items-center sm:h-fit  text-white ">
-            <HoveringTexts />
-            <HoveringTexts />
             <HoveringTexts />
           </div>
         </div>

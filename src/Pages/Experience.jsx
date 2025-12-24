@@ -9,22 +9,22 @@ const Experience = () => {
 
   const hoveredJobText = [
     // Tech role
-    ["JAVASCRIPT" , "NODE"],
+    ["JAVASCRIPT", "NODE"],
 
     // Intern / Tech role
-    ["REACT" , "DATABASES"],
+    ["REACT", "DATABASES"],
 
     // Open source / Community
-    ["OPEN SOURCE" , "COLLABORATION"],
+    ["OPEN SOURCE", "COLLABORATION"],
 
     // Moderator / Ops
-    ["COMMUNITY" , "OPERATIONS"],
+    ["COMMUNITY", "OPERATIONS"],
 
     // Lead / Management
-    ["TEAM" , "LEADERSHIP"],
+    ["TEAM", "LEADERSHIP"],
 
     // Content / Blogging
-    ["CONTENT" , "CREATION"],
+    ["CONTENT", "CREATION"],
   ];
 
   const jobs = [
@@ -117,8 +117,10 @@ const Experience = () => {
                   ease: "easeOut",
                 }}
               >
-                <HoveringTexts Hometexts={hoveredJobText[index]} textdetails={{ size: "8xl", color:"black"}} />
-                <HoveringTexts Hometexts={hoveredJobText[index]} textdetails={{ size: "8xl", color:"black"}} />
+                <HoveringTexts
+                  Hometexts={hoveredJobText[index]}
+                  textdetails={{ size: "8xl", color: "black" }}
+                />
               </motion.div>
             )}
           </div>
