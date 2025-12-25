@@ -43,21 +43,20 @@ const Github = () => {
           </motion.div>
           <div className="sm:mx-20 mx-6 flex flex-col items-start gap-8 font-secondary">
             <h1 className="text-4xl  hover:bg-white duration-300 ease-in-out cursor-pointer hover:text-black text-center font-black sm:py-2 rounded-2xl text-white">
-              {data.name}
+              <span className=" text-[#D3FD50]">{data.name}</span>
             </h1>
             <h1 className="sm:text-2xl text-white/70 sm:w-130 w-90">
               {data.bio}
             </h1>
             <h1 className="sm:text-4xl flex flex-wrap gap-3">
-              Rate this repo on Github{" "}
+              <span className=" text-[#D3FD50]">Rate this repo on Github{" "}</span>
               <a
                 href="https://github.com/Disguised-toast0/Framer-Portfolio"
                 target="_blank"
               >
                 <span
                   className="bg-white text-black font-bold py-2 px-4 rounded-2xl
-         hover:duration-300 ease-in-out hover:bg-yellow-300 cursor-pointer"
-                >
+         hover:duration-300 ease-in-out hover:bg-[#D3FD50]"> 
                   Star <FontAwesomeIcon icon={faMeteor} />
                 </span>
               </a>

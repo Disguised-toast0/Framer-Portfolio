@@ -117,18 +117,21 @@ const Homepage = () => {
               >
                 <FontAwesomeIcon icon={faPlay} />
               </motion.button>
-              <h1 className="font-secondary">Immersive music</h1>
+              <h1 className="font-secondary">Muzic</h1>
             </div>
 
-            <div className="flex flex-col items-center uppercase tracking-wide sm:text-[130px] mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
+            <div className="flex flex-col items-center tracking-wide sm:text-[100px] mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
+                className="font-subtext font-black  text-[#D3FD50] uppercase"
               >
-                Piyush Koundal{" "}
-                <span className="text-xl block">Frontend & Full-Stack Dev</span>
-                <span className="text-lg block text-white/70">
+                Piyush <span className="text-white">Koundal</span>{" "}
+                <span className="text-xl block font-secondary mt-4 text-white">
+                  Frontend & Full-Stack Dev
+                </span>
+                <span className="text-lg block text-white/70 font-secondary capitalize">
                   Creating modern web experiences that connect design with
                   performance.
                 </span>
@@ -158,20 +161,22 @@ const Homepage = () => {
         className="bg-black text-white  sm:min-h-screen h-screen lg:h-screen  "
       >
         <div className="flex items-center text-center justify-center h-full px-7">
-          <div className="lg:flex justify-between w-full lg:mx-10 mx-4 space-y-10 lg:space-y-0">
+          <div className="lg:flex justify-between w-full lg:mx-10 mx-4">
             <motion.h1
               initial={{ opacity: 0, translateY: -50 }}
               whileInView={{ opacity: 1, translateY: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="sm:w-190 sm:text-[39px] sm:leading-12 capitalize text-left font-secondary  tracking-wide"
+              className="sm:w-220 sm:text-[55px] leading-18  text-[#D3FD50] text-left font-subtext tracking-wide "
             >
-              Driven by curiosity and a love for design, I create functional and
-              visually striking websites. As a developer, I’m always learning
-              and exploring new ideas.
+              Driven by <span className="text-white">curiosity</span> and a <span className="text-white">love</span> for design <br />
+              <h1 className=" text-3xl mt-4 w-150 text-white font-secondary leading-10 tracking-tighter">
+                I create functional and <span className=" text-[#D3FD50]">visually striking</span> websites. As a
+                developer, I’m always learning and exploring new ideas.
+              </h1>
             </motion.h1>
 
-            <div className="sm:w-120 flex flex-col lg:text-right sm:text-left text-right sm:mt-30 justify-center">
+            <div className="sm:w-100 flex flex-col lg:text-right sm:text-left text-right sm:mt-30 justify-center">
               <motion.h1
                 initial={{ opacity: 0, translateY: -50 }}
                 whileInView={{ opacity: 1, translateY: 1 }}
@@ -179,8 +184,7 @@ const Homepage = () => {
                 viewport={{ once: true }}
                 className="sm:text-xl font-secondary"
               >
-                The fusion of my passion for design, development, and seamless
-                user experiences places me at the intersection of creativity.
+                My passion for design sparks new domain of <span className=" text-[#D3FD50]">creativity.</span>
               </motion.h1>
 
               <div className="flex items-center justify-end">
@@ -207,7 +211,7 @@ const Homepage = () => {
       <div className=" text-white  pt-14 border-solid min-h-screen border-white/20 bg-black">
         <div className="relative bg-black flex flex-col border-y-1 border-white/30 border-solid justify-center  sm:p-4 p-2">
           <div className="lg:text-[30px] text-3xl flex items-center sm:h-fit  text-white ">
-            <HoveringTexts  />
+            <HoveringTexts />
           </div>
         </div>
 
@@ -219,7 +223,7 @@ const Homepage = () => {
           className="flex justify-between text-center items-center sm:p-10 p-4"
         >
           <h1 className="text-left sm:text-8xl text-4xl font-black font-primary ">
-            Recent Works
+            Recent <span className=" text-[#D3FD50]">Works</span>
           </h1>
           <h1 className="text-left text-white/40 font-black text-6xl mr-2 sm:text-8xl ">
             6<span className="text-xl">repo</span>

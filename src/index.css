@@ -5,19 +5,20 @@
     --font-display: "Wix Madefor Display", sans-serif;
     --font-secondary: "IBM Plex Mono", monospace;
     --font-fancy: "Barrio", system-ui;
-  }
-
-
-::-webkit-scrollbar{
-  display: none;
+    --font-script: "Asset", serif;
+    --font-subtext: "Notable", sans-serif;
+    --font-dirt: "Rubik Glitch Pop", system-ui;
 }
 
-html{
-  scrollbar-width: none;
-  
+::-webkit-scrollbar {
+    display: none;
 }
 
-body{
-  margin: 0;
-  padding: 0;
+html {
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }

@@ -9,22 +9,22 @@ const Experience = () => {
 
   const hoveredJobText = [
     // Tech role
-    ["JAVASCRIPT", "NODE"],
+    ["JAVASCRIPT", "NODE", "BUG FIXING"],
 
     // Intern / Tech role
-    ["REACT", "DATABASES"],
+    ["REACT", "DATABASES", "NODE BACKEND"],
 
     // Open source / Community
-    ["OPEN SOURCE", "COLLABORATION"],
+    ["OPEN SOURCE", "COLLABORATION", "CONTRIBUTOR"],
 
     // Moderator / Ops
-    ["COMMUNITY", "OPERATIONS"],
+    ["COMMUNITY", "OPERATIONS", "MODERATOR"],
 
     // Lead / Management
-    ["TEAM", "LEADERSHIP"],
+    ["TEAM", "LEADERSHIP", "MAINTAINENCE"],
 
     // Content / Blogging
-    ["CONTENT", "CREATION"],
+    ["CONTENT", "CREATION", "ARTICLES"],
   ];
 
   const jobs = [
@@ -110,16 +110,21 @@ const Experience = () => {
             {HoveredIndex === index && (
               <motion.div
                 layoutId="hover-layer"
-                className="absolute inset-0 bg-[#D3FD50] flex items-center justify-between py-8 sm:px-20 px-4"
+                className="absolute cursor-pointer inset-0 bg-white/10 backdrop-blur-lg flex items-center justify-between py-8 sm:px-20 px-4"
                 transition={{
                   type: "tween",
                   duration: 0.2,
                   ease: "easeOut",
                 }}
+                // bg-[#D3FD50]
               >
                 <HoveringTexts
                   Hometexts={hoveredJobText[index]}
-                  textdetails={{ size: "8xl", color: "black" }}
+                  textdetails={{
+                    size: "text-[100px]",
+                    color: "text-[#D3FD50]",
+                    pace: 5,
+                  }}
                 />
               </motion.div>
             )}
