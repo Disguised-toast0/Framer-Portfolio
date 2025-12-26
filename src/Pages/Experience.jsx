@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import HoveringTexts from "../utils/HoveringTexts";
 
 const Experience = () => {
-  const [HoveredIndex, setHoveredIndex] = useState(0);
+  const [HoveredIndex, setHoveredIndex] = useState(null);
 
   const hoveredJobText = [
     // Tech role

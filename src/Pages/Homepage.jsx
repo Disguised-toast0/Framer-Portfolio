@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import {
@@ -167,12 +168,15 @@ const Homepage = () => {
               whileInView={{ opacity: 1, translateY: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="sm:w-220 sm:text-[55px] leading-18  text-[#D3FD50] text-left font-subtext tracking-wide "
+              className="sm:w-220 sm:text-[55px] text-4xl sm:leading-18 pb-30  text-[#D3FD50] text-left font-subtext tracking-wide "
             >
-              Driven by <span className="text-white">curiosity</span> and a <span className="text-white">love</span> for design <br />
-              <h1 className=" text-3xl mt-4 w-150 text-white font-secondary leading-10 tracking-tighter">
-                I create functional and <span className=" text-[#D3FD50]">visually striking</span> websites. As a
-                developer, I’m always learning and exploring new ideas.
+              Driven by <span className="text-white">curiosity</span> and a{" "}
+              <span className="text-white">love</span> for design <br />
+              <h1 className=" sm:text-3xl mt-4 text-lg sm:w-150 text-white font-secondary sm:leading-10 tracking-tighter">
+                I create functional and{" "}
+                <span className=" text-[#D3FD50]">visually striking</span>{" "}
+                websites. As a developer, I’m always learning and exploring new
+                ideas.
               </h1>
             </motion.h1>
 
@@ -182,9 +186,16 @@ const Homepage = () => {
                 whileInView={{ opacity: 1, translateY: 1 }}
                 transition={{ duration: 1.4 }}
                 viewport={{ once: true }}
-                className="sm:text-xl font-secondary"
+                className="sm:text-xl font-secondary flex flex-col items-end"
               >
-                My passion for design sparks new domain of <span className=" text-[#D3FD50]">creativity.</span>
+                <DotLottieReact
+                  src="/amongus.lottie"
+                  loop
+                  autoplay
+                  className="sm:w-30 sm:h-30 mb-4"
+                />
+                My passion for design sparks new{" "}
+                <span className=" text-[#D3FD50]">creativity.</span>
               </motion.h1>
 
               <div className="flex items-center justify-end">
