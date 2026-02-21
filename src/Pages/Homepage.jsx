@@ -121,7 +121,7 @@ const Homepage = () => {
               <h1 className="font-secondary">Muzic</h1>
             </div>
 
-            <div className="flex flex-col items-center tracking-wide sm:text-[100px] text-3xl mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
+            <div className="flex flex-col items-center tracking-wide sm:text-[100px] text-[40px] mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

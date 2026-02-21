@@ -94,15 +94,15 @@ const Experience = () => {
                 <img
                   src={job.img}
                   alt={job.title}
-                  className="w-16 h-16 rounded-2xl shadow-xl shadow-black/60"
+                  className="sm:w-16 sm:h-16 w-10 h-10 rounded-2xl shadow-xl shadow-black/60"
                 />
-                <div className="font-secondary sm:text-xl">
+                <div className="font-secondary sm:text-xl text-lg">
                   <h1>{job.title}</h1>
-                  <h1 className="text-lg text-white/60">{job.mintitle}</h1>
+                  <h1 className="sm:text-lg text-sm text-white/60">{job.mintitle}</h1>
                 </div>
               </div>
 
-              <h1 className="sm:mr-10 sm:text-[10px] text-[6.5px] tracking-widest px-2 border rounded-2xl">
+              <h1 className="sm:mr-10 sm:text-[10px] text-[6.5px] tracking-wider text-center border sm:w-32 w-23 rounded-2xl">
                 {job.date}
               </h1>
             </div>
