@@ -121,19 +121,19 @@ const Homepage = () => {
               <h1 className="font-secondary">Muzic</h1>
             </div>
 
-            <div className="flex flex-col items-center tracking-wide sm:text-[100px] mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
+            <div className="flex flex-col items-center tracking-wide sm:text-[100px] text-3xl mx-10 justify-center sm:h-[70vh] h-[65vh] text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="font-subtext font-black  text-[#D3FD50] uppercase"
+                className="font-black  text-purple-300 uppercase"
               >
-                Piyush <span className="text-white">Koundal</span>{" "}
-                <span className="text-xl block font-secondary mt-4 text-white">
+                <span className="font-subtext">Piyush Koundal{" "}</span>
+                <span className="sm:text-xl text-sm block font-secondary sm:mt-4 mt-2 text-white">
                   Frontend & Full-Stack Dev
                 </span>
-                <span className="text-lg block text-white/70 font-secondary capitalize">
-                  Creating modern web experiences that connect design with
+                <span className="sm:text-sm text-xs block text-white/70 lowercase font-normal">
+                  creating modern web experiences that connect design with
                   performance.
                 </span>
               </motion.h1>
@@ -168,13 +168,13 @@ const Homepage = () => {
               whileInView={{ opacity: 1, translateY: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="sm:w-220 sm:text-[55px] text-4xl sm:leading-18 pb-30  text-[#D3FD50] text-left font-subtext tracking-wide "
+              className="sm:w-220 sm:text-[55px] text-4xl sm:leading-18 pb-30  text-purple-300 text-left tracking-wide "
             >
-              Driven by <span className="text-white">curiosity</span> and a{" "}
-              <span className="text-white">love</span> for design <br />
-              <h1 className=" sm:text-3xl mt-4 text-lg sm:w-150 text-white font-secondary sm:leading-10 tracking-tighter">
+             <span className="font-subtext">Driven by <span className="text-white">curiosity</span> and a{" "}
+              <span className="text-white">love</span> for design</span> <br />
+              <h1 className=" sm:text-2xl mt-4 text-lg sm:w-150 text-white font-normal sm:leading-10 tracking-wider">
                 I create functional and{" "}
-                <span className=" text-[#D3FD50]">visually striking</span>{" "}
+                <span className=" text-purple-300">visually striking</span>{" "}
                 websites. As a developer, I’m always learning and exploring new
                 ideas.
               </h1>
@@ -189,13 +189,13 @@ const Homepage = () => {
                 className="sm:text-xl font-secondary flex flex-col items-end"
               >
                 <DotLottieReact
-                  src="/amongus.lottie"
+                  src="/clock.lottie"
                   loop
                   autoplay
-                  className="sm:w-30 sm:h-30 mb-4"
+                  className="sm:w-50 sm:h-50"
                 />
                 My passion for design sparks new{" "}
-                <span className=" text-[#D3FD50]">creativity.</span>
+                <span className=" text-purple-300">creativity.</span>
               </motion.h1>
 
               <div className="flex items-center justify-end">
@@ -234,7 +234,7 @@ const Homepage = () => {
           className="flex justify-between text-center items-center sm:p-10 p-4"
         >
           <h1 className="text-left sm:text-8xl text-4xl font-black font-primary ">
-            Recent <span className=" text-[#D3FD50]">Works</span>
+            Recent <span className=" text-purple-300">Works</span>
           </h1>
           <h1 className="text-left text-white/40 font-black text-6xl mr-2 sm:text-8xl ">
             6<span className="text-xl">repo</span>

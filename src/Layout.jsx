@@ -122,7 +122,7 @@ const Layout = () => {
                   ease: [0.22, 1, 0.36, 1],
                   delay: index * 0.04, // delay
                 }}
-                className="origin-top w-1/5 h-screen bg-[#D3FD50]"
+                className="origin-top w-1/5 h-screen bg-purple-300/90"
               >
                 {index === 2 && (
                   <motion.h1
@@ -151,7 +151,7 @@ const Layout = () => {
                   ease: [0.22, 1, 0.36, 1],
                   delay: index * 0.04,
                 }}
-                className="origin-bottom w-1/5 h-screen bg-[#D3FD50]"
+                className="origin-bottom w-1/5 h-screen bg-purple-300/90"
               ></motion.div>
             ))}
           </div>

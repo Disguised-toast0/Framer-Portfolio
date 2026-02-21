@@ -1,168 +1,211 @@
 import React from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import Footer from "../Components/Footer";
 
 const About = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
   const skills = [
     {
-      title: "Front-End Development",
-      icons: [
-        { src: "icons(1)", alt: "HTML5 icon" },
-        { src: "icons(2)", alt: "Javascript icon" },
-        { src: "icons(6)", alt: "React icon" },
-        { src: "icons(3)", alt: "Typescript icon" },
-        { src: "icons(4)", alt: "NextJs icon" },
-        // { src: "icons(5)", alt: "Redux icon" },
-      ],
-      desc: "Building engaging and user-friendly web interfaces using modern frameworks and technologies with expertise.",
-      span: "col-span-1 row-span-3",
+      title: "Frontend Dev & UI",
+      desc: "Website design was the first thing that genuinely pulled me in. What started as curiosity quickly became a passion experimenting with layouts, colors, and structure, and slowly discovering how powerful storytelling through design can be.",
+      icons: ["icons(1)", "icons(2)", "icons(6)", "icons(3)", "icons(4)"],
+      img: ["skill-img1","skill-img2"]
+    },
+     {
+      title: "Styling & Design",
+      desc: "As I built more interfaces, I realized design wasn’t just about placing elements it was about intention. I began exploring spacing, typography, and visual hierarchy, understanding how small styling decisions shape the entire user experience.",
+      icons: ["icons(11)", "icons(12)", "icons(13)", "icons(14)"],
+      img: ["skill-img5","skill-img6"]
     },
     {
       title: "Web Animations",
-      icons: [
-        { src: "icons(20)", alt: "Framer Motion icon" },
-        { src: "icons(21)", alt: "GSAP icon" },
-        { src: "icons(22)", alt: "Spline icon" },
-      ],
-      desc: "Creating seamless animations and transitions to enhance user engagement and interactivity.",
-      span: "col-span-1 row-span-2",
+      desc: "Then I discovered motion. Adding animation changed everything suddenly websites didn’t just look good, they felt dynamic. I started using movement to guide attention, create flow, and make interactions feel natural rather than mechanical.",
+      icons: ["icons(20)", "icons(21)", "icons(22)"],
+      img: ["skill-img3","skill-img4"]
     },
     {
       title: "Programming Languages",
-      icons: [
-        { src: "icons(27)", alt: "Python icon" },
-        // { src: "icons(28)", alt: "C icon" },
-        { src: "icons(36)", alt: "C++ icon" },
-      ],
-      desc: "Proficient in problem-solving and applying programming languages to implement efficient data structures and algorithms.",
-      span: "col-span-1 row-span-2",
+      desc: "As my curiosity grew, I wanted to understand what was happening behind the scenes. Learning programming languages helped me think logically breaking problems down, structuring solutions, and building systems that weren’t just beautiful, but intelligent.",
+      icons: ["icons(27)", "icons(36)"],
+      img: ["skill-img7","skill-img8"]
+    },
+        {
+      title: "Backend Dev",
+      desc: "Frontend showed me experience. Backend taught me responsibility. I began building APIs and handling server-side logic, realizing that great applications aren’t just seen they’re supported by strong architecture underneath.",
+      icons: ["icons(7)", "icons(8)", "icons(9)"],
+      img: ["skill-img9","skill-img10"]
     },
     {
-      title: "Styling & Design",
-      icons: [
-        { src: "icons(11)", alt: "Css icon" },
-        { src: "icons(12)", alt: "Tailwindcss icon" },
-        { src: "icons(13)", alt: "Bootstrap icon" },
-        { src: "icons(14)", alt: "Sass icon" },
-        // { src: "icons(15)", alt: "NextUI icon" },
-      ],
-      desc: "Crafting visually appealing and responsive designs with advanced styling tools and frameworks.",
-      span: "col-span-1 row-span-3",
+      title: "Database & Management",
+      desc: "With backend development came the need to manage data properly. I learned how important structure and optimization are designing databases that are secure, scalable, and capable of supporting real-world applications.",
+      icons: ["icons(29)", "icons(30)", "icons(31)"],
+      img: ["skill-img11","skill-img12"]
     },
     {
-      title: "Database Management",
-      icons: [
-        { src: "icons(29)", alt: "MySQL icon" },
-        { src: "icons(30)", alt: "PostgreSQL icon" },
-        { src: "icons(31)", alt: "MongoDB icon" },
-        { src: "icons(32)", alt: "Firebase icon" },
-      ],
-      desc: "Designing and managing databases to ensure secure and efficient data storage and retrieval.",
-      span: "col-span-1 row-span-2",
-    },
-    {
-      title: "Back-End Development",
-      icons: [
-        { src: "icons(7)", alt: "Node.js icon" },
-        { src: "icons(8)", alt: "Express.js icon" },
-        { src: "icons(9)", alt: "FastAPI icon" },
-        // { src: "icons(10)", alt: "REST API icon" },
-      ],
-      desc: "Developing robust server-side logic and APIs to power dynamic and scalable web applications.",
-      span: "col-span-1 row-span-2",
-    },
-    {
-      title: "Version Control & Collaboration",
-      icons: [
-        { src: "icons(33)", alt: "GitHub icon" },
-        { src: "icons(34)", alt: "Git icon" },
-      ],
-      desc: "Effectively managing code and collaborating on projects to ensure seamless teamwork.",
-      span: "col-span-1 row-span-2",
-    },
-    {
-      title: "UI/UX Design",
-      icons: [{ src: "icons(35)", alt: "Figma icon" }],
-      desc: "Designing user-centric interfaces that are intuitive, visually appealing, and easy to navigate.",
-      span: "col-span-1 row-span-2",
-    },
-    {
-      title: "Testing & Debugging",
-      icons: [
-        { src: "icons(26)", alt: "Postman icon" },
-        { src: "icons(18)", alt: "React Testing Library icon" },
-        // { src: "icons(19)", alt: "Selenium icon" },
-      ],
-      desc: "Ensuring code quality and reliability through rigorous testing and debugging processes.",
-      span: "col-span-1 row-span-3",
+      title: "Version Control & Collab",
+      desc: "As projects became more complex, collaboration became essential. Version control taught me discipline writing cleaner code, managing changes carefully, and building in a way that works not just for me, but for teams.",
+      icons: ["icons(33)", "icons(34)"],
+      img: ["skill-img13","skill-img14"]
     },
     {
       title: "Cloud & Deployment",
-      icons: [
-        // { src: "icons(16)", alt: "Docker icon" },
-        // { src: "icons(17)", alt: "Azure icon" },
-        { src: "icons(23)", alt: "Aws icon" },
-        { src: "icons(24)", alt: "One icon" },
-        { src: "icons(25)", alt: "Vercel icon" },
-      ],
-      desc: "Experienced in deploying and managing applications using modern cloud platforms and tools.",
-      span: "col-span-1 row-span-4",
-    },
-    {
-      title: " Personal Development",
-      icons: [],
-      desc: "Committed to continuous learning and personal growth to excel in both professional and collaborative environments.",
-      span: "col-span-1 row-span-3",
-    },
-    {
-      title: "Core Computer Science Concepts",
-      icons: [],
-      desc: "Demonstrating a strong foundation in core computer science principles, including problem-solving, system design, and efficient computing techniques.",
-      span: "col-span-1 row-span-2 ",
+      desc: "Eventually, I realized building isn’t complete until it’s live. Deployment and cloud infrastructure taught me how to scale ideas turning local projects into production-ready applications accessible to the world.",
+      icons: ["icons(16)", "icons(24)", "icons(25)"],
+      img: ["skill-img15","skill-img16"]
     },
   ];
 
   return (
-    <div className=" overflow-x-hidden">
-      <section className="flex justify-between bg-black w-full py-30 relative sm:px-20 px-4 text-white sm:text-6xl text-5xl font-black font-secondary">
-        <div>
-          <h1>Skills</h1>
-        </div>
-        <h1 className="text-white/40">
+    <div className="overflow-x-hidden bg-black text-white">
+      <section className="flex justify-between items-center w-full py-24 sm:px-20 px-6 mb-20">
+        <h1 className="sm:text-6xl text-5xl font-black font-secondary">
+          Skills
+        </h1>
+
+        <h1 className="text-white/40 sm:text-6xl text-5xl font-black">
           {skills.length}
-          <span className="text-xl">areas</span>
+          <span className="block text-lg font-normal text-white/60">
+            areas
+          </span>
         </h1>
       </section>
 
-      <section className="sm:h-[170vh] grid  sm:grid-cols-3 bg-black grid-col-1 sm:grid-rows-10">
-        {skills.map((cols, index) => (
-          <motion.div
-            whileHover={{ scale: 1.04 }}
-            transition={{ duration: 0.1 }}
-            key={index}
-            className={`border-white/30 hover:backdrop-blur-md p-6 sm:p-0 border-solid border-1 bg-black h-full w-full flex flex-col hover:shadow-xl hover:shadow-white/40 justify-center ${cols.span}`}
+<section className="px-6 sm:px-20 pb-32">
+  <div className="mb-20 font-semibold">
+  <h1 className="font-secondary">⊙ From Curiosity to Craft</h1>
+  <p className="text-white/40">hover or click for stories </p>
+  </div>
+
+  <div className="flex flex-col sm:gap-40 gap-20">
+    {skills.map((item, index) => {
+      const isLeft = index % 2 === 0;
+      const isActive = activeIndex === index;
+
+      return (
+        <motion.div
+          key={index}
+          initial="rest"
+          whileHover="hover"
+          animate="rest"
+          className="group"
+          onClick={() =>
+            window.innerWidth < 640 &&
+            setActiveIndex(isActive ? null : index)
+          }
+        >
+          <div
+            className={`flex flex-col sm:flex-row items-center gap-8 sm:gap-16 ${
+              isLeft ? "" : "sm:flex-row-reverse"
+            }`}
           >
-            <div className="flex flex-col justify-start mx-auto gap-y-3">
-              <div className="flex  gap-4 flex-wrap">
-                {cols.icons.map((icon, i) => (
-                  <motion.div whileHover={{ y: -10 }} key={i}>
-                    <img
+            <div
+              className={`flex flex-col ${
+                isLeft ? "items-start text-left" : "items-end text-right"
+              } flex-1`}
+            >
+              <motion.h1
+                variants={{
+                  rest: { scale: 1 },
+                  hover: { scale: 1.04 },
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="text-4xl sm:text-6xl font-display font-semibold cursor-pointer"
+              >
+                {item.title}
+              </motion.h1>
+              <motion.div
+                animate={{
+                  opacity:
+                    window.innerWidth < 640
+                      ? isActive
+                        ? 1
+                        : 0
+                      : undefined,
+                  y:
+                    window.innerWidth < 640
+                      ? isActive
+                        ? 0
+                        : 20
+                      : undefined,
+                  height:
+                    window.innerWidth < 640
+                      ? isActive
+                        ? "auto"
+                        : 0
+                      : undefined,
+                }}
+                variants={{
+                  rest: { opacity: 0, y: 20, height: 0 },
+                  hover: { opacity: 1, y: 0, height: "auto" },
+                }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden mt-6 max-w-xl"
+              >
+                <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-6">
+                  {item.desc}
+                </p>
+
+                <div
+                  className={`flex gap-6 flex-wrap ${
+                    isLeft ? "justify-start" : "justify-end"
+                  }`}
+                >
+                  {item.icons.map((icon, i) => (
+                    <motion.img
                       key={i}
-                      src={`/icons/${icon.src}.webp`}
-                      alt={icon.alt}
-                      className="sm:bg-white/10 sm:p-3 rounded-md sm:w-15 sm:h-15 h-6 w-6"
+                      src={`/icons/${icon}.webp`}
+                      alt="tech icon"
+                      whileHover={{ y: -6, scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 250 }}
+                      className="w-9 h-9 sm:w-9 sm:h-9 object-contain"
                     />
-                  </motion.div>
-                ))}
-              </div>
-              <h1 className="text-lg text-white font-display">{cols.title}</h1>
-              <h1 className="text-sm text-white/60 font-primary w-90">
-                {cols.desc}
-              </h1>
+                  ))}
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
-        ))}
-      </section>
+
+            <div className="flex-1 w-full">
+              <div className="relative w-full h-[150px] sm:h-[300px] overflow-hidden">
+                <motion.img
+                  src={`/${item.img?.[0] || "skill-img1"}.jpg`}
+                  alt="preview"
+                  className="absolute w-full h-full object-cover"
+                  animate={
+                    window.innerWidth < 640
+                      ? { y: isActive ? "-100%" : "0%" }
+                      : undefined
+                  }
+                  variants={{
+                    rest: { y: "0%" },
+                    hover: { y: "-100%" },
+                  }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+
+                <motion.img
+                  src={`/${item.img?.[1] || "skill-img2"}.jpg`}
+                  alt="preview"
+                  className="absolute w-full h-full object-cover"
+                  animate={
+                    window.innerWidth < 640
+                      ? { y: isActive ? "0%" : "100%" }
+                      : undefined
+                  }
+                  variants={{
+                    rest: { y: "100%" },
+                    hover: { y: "0%" },
+                  }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      );
+    })}
+  </div>
+</section>
 
       <Footer />
     </div>

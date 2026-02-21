@@ -89,7 +89,7 @@ const Experience = () => {
             onMouseLeave={() => setHoveredIndex(null)}
             className="relative"
           >
-            <div className="flex items-center justify-between h-35 py-8 border-b border-white/30 sm:px-20 px-4">
+            <div className="flex items-center justify-between h-35 py-8 sm:px-20 px-4">
               <div className="flex gap-4 items-center w-80">
                 <img
                   src={job.img}
@@ -102,7 +102,7 @@ const Experience = () => {
                 </div>
               </div>
 
-              <h1 className="sm:mr-10 text-[10px] tracking-widest px-2 border rounded-2xl">
+              <h1 className="sm:mr-10 sm:text-[10px] text-[6.5px] tracking-widest px-2 border rounded-2xl">
                 {job.date}
               </h1>
             </div>
@@ -116,13 +116,13 @@ const Experience = () => {
                   duration: 0.2,
                   ease: "easeOut",
                 }}
-                // bg-[#D3FD50]
+                // bg-purple-300
               >
                 <HoveringTexts
                   Hometexts={hoveredJobText[index]}
                   textdetails={{
                     size: "text-[100px]",
-                    color: "text-[#D3FD50]",
+                    color: "text-purple-300",
                     pace: 5,
                   }}
                 />

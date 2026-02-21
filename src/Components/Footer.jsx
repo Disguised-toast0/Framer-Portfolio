@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="sm:mx-20 mx-4">
         <div>
           <h1 className="sm:w-200 w-90 text-[33px] sm:text-6xl lg:text-5xl font-display sm:font-secondary ">
-            Got a <span className=" text-[#D3FD50]">project</span> in mind?
+            Got a <span className=" text-purple-300">project</span> in mind?
             Let’s talk
           </h1>
         </div>
@@ -91,7 +91,7 @@ const Footer = () => {
             </li>
           </ul>
           <h1 className="sm:text-[40px] pl-20 text-2xl font-primary">
-            Your friendly <span className=" text-[#D3FD50]">chaos</span>{" "}
+            Your friendly <span className=" text-purple-300">chaos</span>{" "}
             creator{" "}
           </h1>
           {/* <NavLink to={"/skills"}>
@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
 
         <div className="sm:flex justify-between w-full sm:mx-4 items-center ">
-          <h1 className="lg:text-[220px] sm:text-[120px] text-center tracking-wide text-[55px] font-dirt font-bold text-[#D3FD50] ">
+          <h1 className="lg:text-[220px] sm:text-[120px] text-center tracking-wide text-[55px] font-dirt font-bold text-purple-300 ">
             @Itspiyushk
           </h1>
           {/* <h1 className="sm:text-[40px] text-2xl pt-5 font-primary">
@@ -116,7 +116,7 @@ const Footer = () => {
         <div className="sm:p-4 sm:px-15 mt-3 px-3 py-2 border-2 border-solid border-white/40 rounded-2xl sm:mx-10 mx-4 flex justify-between font-secondary text-white/80 capitalize text-sm">
           <h1 className="sm:text-sm text-[10px] sm:w-130 lg:w-150 w-55 ">
             @2025 PiyushK | don't steal my work! |{" "}
-            <span className=" text-[#D3FD50]">don't hate the font</span>
+            <span className=" text-purple-300">don't hate the font</span>
           </h1>
           <h1>{time}</h1>
         </div>
