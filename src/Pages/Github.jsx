@@ -53,6 +53,7 @@ const Github = () => {
               <a
                 href="https://github.com/Disguised-toast0/Framer-Portfolio"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <span
                   className="bg-white text-black font-bold py-2 px-4 rounded-2xl

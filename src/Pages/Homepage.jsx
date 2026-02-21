@@ -172,12 +172,12 @@ const Homepage = () => {
             >
              <span className="font-subtext">Driven by <span className="text-white">curiosity</span> and a{" "}
               <span className="text-white">love</span> for design</span> <br />
-              <h1 className=" sm:text-2xl mt-4 text-lg sm:w-150 text-white font-normal sm:leading-10 tracking-wider">
+              <span className="sm:text-2xl mt-4 text-lg sm:w-150 text-white font-normal sm:leading-10 tracking-wider block">
                 I create functional and{" "}
                 <span className=" text-purple-300">visually striking</span>{" "}
-                websites. As a developer, I’m always learning and exploring new
+                websites. As a developer, I'm always learning and exploring new
                 ideas.
-              </h1>
+              </span>
             </motion.h1>
 
             <div className="sm:w-100 flex flex-col lg:text-right sm:text-left text-right sm:mt-30 justify-center">

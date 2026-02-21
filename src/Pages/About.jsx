@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import useIsMobile from "../hooks/useIsMobile";
 import { motion } from "motion/react";
 import Footer from "../Components/Footer";
 
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const isMobile = useIsMobile();
   const skills = [
     {
       title: "Frontend Dev & UI",
@@ -89,10 +91,7 @@ const About = () => {
           whileHover="hover"
           animate="rest"
           className="group"
-          onClick={() =>
-            window.innerWidth < 640 &&
-            setActiveIndex(isActive ? null : index)
-          }
+          onClick={() => isMobile && setActiveIndex(isActive ? null : index)}
         >
           <div
             className={`flex flex-col sm:flex-row items-center gap-8 sm:gap-16 ${
@@ -115,26 +114,15 @@ const About = () => {
                 {item.title}
               </motion.h1>
               <motion.div
-                animate={{
-                  opacity:
-                    window.innerWidth < 640
-                      ? isActive
-                        ? 1
-                        : 0
-                      : undefined,
-                  y:
-                    window.innerWidth < 640
-                      ? isActive
-                        ? 0
-                        : 20
-                      : undefined,
-                  height:
-                    window.innerWidth < 640
-                      ? isActive
-                        ? "auto"
-                        : 0
-                      : undefined,
-                }}
+                animate={
+                  isMobile
+                    ? {
+                        opacity: isActive ? 1 : 0,
+                        y: isActive ? 0 : 20,
+                        height: isActive ? "auto" : 0,
+                      }
+                    : undefined
+                }
                 variants={{
                   rest: { opacity: 0, y: 20, height: 0 },
                   hover: { opacity: 1, y: 0, height: "auto" },
@@ -155,7 +143,7 @@ const About = () => {
                     <motion.img
                       key={i}
                       src={`/icons/${icon}.webp`}
-                      alt="tech icon"
+                      alt={`${icon} icon`}
                       whileHover={{ y: -6, scale: 1.1 }}
                       transition={{ type: "spring", stiffness: 250 }}
                       className="w-9 h-9 sm:w-9 sm:h-9 object-contain"
@@ -171,11 +159,7 @@ const About = () => {
                   src={`/${item.img?.[0] || "skill-img1"}.jpg`}
                   alt="preview"
                   className="absolute w-full h-full object-cover"
-                  animate={
-                    window.innerWidth < 640
-                      ? { y: isActive ? "-100%" : "0%" }
-                      : undefined
-                  }
+                    animate={isMobile ? { y: isActive ? "-100%" : "0%" } : undefined}
                   variants={{
                     rest: { y: "0%" },
                     hover: { y: "-100%" },
@@ -187,11 +171,7 @@ const About = () => {
                   src={`/${item.img?.[1] || "skill-img2"}.jpg`}
                   alt="preview"
                   className="absolute w-full h-full object-cover"
-                  animate={
-                    window.innerWidth < 640
-                      ? { y: isActive ? "0%" : "100%" }
-                      : undefined
-                  }
+                    animate={isMobile ? { y: isActive ? "0%" : "100%" } : undefined}
                   variants={{
                     rest: { y: "100%" },
                     hover: { y: "0%" },
